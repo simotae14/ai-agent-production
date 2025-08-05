@@ -29,6 +29,11 @@ runEval('reddit', {
       // it shapes what runLLM returns
       expected: createToolCallMessage(redditToolDefinition.name),
     },
+    {
+      input: 'hi',
+      // it shapes what runLLM returns
+      expected: createToolCallMessage(redditToolDefinition.name),
+    },
   ],
   scorers: [ToolCallMatch],
 })
